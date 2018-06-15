@@ -3,12 +3,12 @@ extern crate bytes;
 extern crate futures;
 extern crate tokio;
 
+use bytes::{BufMut, Bytes, BytesMut};
+use futures::future::{self, Either};
+use futures::sync::mpsc;
 use tokio::io;
 use tokio::net::{TcpListener, TcpStream};
 use tokio::prelude::*;
-use futures::sync::mpsc;
-use futures::future::{self, Either};
-use bytes::{BufMut, Bytes, BytesMut};
 
 use std::collections::HashMap;
 use std::net::SocketAddr;
